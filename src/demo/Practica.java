@@ -12,8 +12,24 @@ import javax.swing.JOptionPane;
  * @author Julio-Cesar
  */
 public class Practica {
+//t1 = input("how much time does it take the first person to do the job? ")
+//t2 = input("how much time does it take the second person to do the job? ")
+//work_per_hour = 1.0 / t1 + 1.0 / t2 
+//
+//hours_to_complete = 1.0 / work_per_hour
+//
+//print "Together, they finished in ", hours_to_complete, "hours."
 
     public static void main(String[] args) {
+
+        String cadena1 = JOptionPane.showInputDialog("¿Cuánto tiempo le toma a la primera persona hacer el trabajo?");
+        String cadena2 = JOptionPane.showInputDialog("¿Cuánto tiempo le toma a la segunda persona hacer el trabajo?");
+        float t1 = Float.parseFloat(cadena1);
+        float t2 = Float.parseFloat(cadena2);
+        float work_per_hour = 1.0f / t1 + 1.0f / t2;
+        float hours_to_complete = 1.0f / work_per_hour;
+        JOptionPane.showMessageDialog(null, "Juntos, ellos terminan en " + hours_to_complete + " horas");
+        
         int[] arr = null;
         int n;
 

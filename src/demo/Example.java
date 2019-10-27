@@ -44,5 +44,23 @@ public class Example {
         for (int i = 0; i < n; i++) {
             System.out.print(ma[i] + ", ");
         }
+        System.out.println("");
+        for (int i = 1; i < 200; i++) {
+            if (isPrime(i)) {
+                System.out.print(i + ", ");
+            }
+        }
+    }
+
+    public static boolean isPrime(int n) {
+        if (n < 2) {
+            return false;
+        }
+        for (int i = 2; i <= n / i; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
